@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 3.7%, 15.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(210, 40%, 8%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(210, 40%, 12%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(32, 87%, 52%);
+  --accent-foreground: hsl(210, 40%, 8%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* Custom colors for the farming app */
+  --farming-primary: hsl(240, 30%, 11%);
+  --farming-secondary: hsl(218, 33%, 15%);
+  --farming-accent: hsl(32, 87%, 52%);
+  --farming-usdt: hsl(165, 64%, 46%);
+  --farming-success: hsl(142, 71%, 45%);
+  --farming-warning: hsl(48, 89%, 60%);
+  --farming-error: hsl(0, 65%, 51%);
+  --farming-pink: hsl(336, 84%, 66%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--farming-primary);
+    color: var(--foreground);
+  }
+}
+
+@layer utilities {
+  .bg-farming-primary {
+    background-color: var(--farming-primary);
+  }
+  
+  .bg-farming-secondary {
+    background-color: var(--farming-secondary);
+  }
+  
+  .bg-farming-accent {
+    background-color: var(--farming-accent);
+  }
+  
+  .bg-farming-usdt {
+    background-color: var(--farming-usdt);
+  }
+  
+  .bg-farming-success {
+    background-color: var(--farming-success);
+  }
+  
+  .bg-farming-warning {
+    background-color: var(--farming-warning);
+  }
+  
+  .bg-farming-error {
+    background-color: var(--farming-error);
+  }
+  
+  .bg-farming-pink {
+    background-color: var(--farming-pink);
+  }
+  
+  .text-farming-accent {
+    color: var(--farming-accent);
+  }
+  
+  .text-farming-usdt {
+    color: var(--farming-usdt);
+  }
+  
+  .text-farming-success {
+    color: var(--farming-success);
+  }
+  
+  .text-farming-warning {
+    color: var(--farming-warning);
+  }
+  
+  .text-farming-error {
+    color: var(--farming-error);
+  }
+  
+  .text-farming-pink {
+    color: var(--farming-pink);
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.farming-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.farming-pulse {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+/* Mobile first responsive design */
+@media (max-width: 768px) {
+  .mobile-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
