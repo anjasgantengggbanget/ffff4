@@ -3,7 +3,7 @@ import { storage } from "./storage";
 const BOT_TOKEN = "8070589589:AAHvliuZmEiQxBEqfoOxYNoBH8iDI9qd4NQ";
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;
 const WEBAPP_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-replit-domain.replit.app' 
+  ? 'https://usdtminer-delta.vercel.app/' 
   : 'http://localhost:5000';
 
 interface TelegramUser {
